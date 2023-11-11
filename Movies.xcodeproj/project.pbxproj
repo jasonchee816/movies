@@ -14,6 +14,11 @@
 		DD70F4292AFF3E3800EC0BF4 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70F4282AFF3E3800EC0BF4 /* MoviesTests.swift */; };
 		DD70F4332AFF3E3800EC0BF4 /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70F4322AFF3E3800EC0BF4 /* MoviesUITests.swift */; };
 		DD70F4352AFF3E3800EC0BF4 /* MoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70F4342AFF3E3800EC0BF4 /* MoviesUITestsLaunchTests.swift */; };
+		DD70F4422AFF417C00EC0BF4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DD70F4412AFF417C00EC0BF4 /* .gitignore */; };
+		DD70F4442AFF41B900EC0BF4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70F4432AFF41B900EC0BF4 /* Config.swift */; };
+		DDD8C6732AFF533900263B49 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = DDD8C6722AFF533900263B49 /* URLImage */; };
+		DDD8C6752AFF535B00263B49 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = DDD8C6742AFF535B00263B49 /* URLImageStore */; };
+		DDD8C6782AFF588500263B49 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD8C6772AFF588500263B49 /* DetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,9 @@
 		DD70F42E2AFF3E3800EC0BF4 /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD70F4322AFF3E3800EC0BF4 /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		DD70F4342AFF3E3800EC0BF4 /* MoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD70F4412AFF417C00EC0BF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DD70F4432AFF41B900EC0BF4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DDD8C6772AFF588500263B49 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD8C6752AFF535B00263B49 /* URLImageStore in Frameworks */,
+				DDD8C6732AFF533900263B49 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +85,8 @@
 		DD70F40A2AFF3E3300EC0BF4 = {
 			isa = PBXGroup;
 			children = (
+				DD70F4432AFF41B900EC0BF4 /* Config.swift */,
+				DD70F4412AFF417C00EC0BF4 /* .gitignore */,
 				DD70F4152AFF3E3300EC0BF4 /* Movies */,
 				DD70F4272AFF3E3800EC0BF4 /* MoviesTests */,
 				DD70F4312AFF3E3800EC0BF4 /* MoviesUITests */,
@@ -95,8 +107,8 @@
 		DD70F4152AFF3E3300EC0BF4 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				DDD8C6762AFF585600263B49 /* Screens */,
 				DD70F4162AFF3E3300EC0BF4 /* MoviesApp.swift */,
-				DD70F4182AFF3E3300EC0BF4 /* ContentView.swift */,
 				DD70F41A2AFF3E3800EC0BF4 /* Assets.xcassets */,
 				DD70F41C2AFF3E3800EC0BF4 /* Movies.entitlements */,
 				DD70F41D2AFF3E3800EC0BF4 /* Preview Content */,
@@ -129,6 +141,15 @@
 			path = MoviesUITests;
 			sourceTree = "<group>";
 		};
+		DDD8C6762AFF585600263B49 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DD70F4182AFF3E3300EC0BF4 /* ContentView.swift */,
+				DDD8C6772AFF588500263B49 /* DetailScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +166,10 @@
 			dependencies = (
 			);
 			name = Movies;
+			packageProductDependencies = (
+				DDD8C6722AFF533900263B49 /* URLImage */,
+				DDD8C6742AFF535B00263B49 /* URLImageStore */,
+			);
 			productName = Movies;
 			productReference = DD70F4132AFF3E3300EC0BF4 /* Movies.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +242,9 @@
 				Base,
 			);
 			mainGroup = DD70F40A2AFF3E3300EC0BF4;
+			packageReferences = (
+				DD70F4452AFF522300EC0BF4 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = DD70F4142AFF3E3300EC0BF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD70F41F2AFF3E3800EC0BF4 /* Preview Assets.xcassets in Resources */,
+				DD70F4422AFF417C00EC0BF4 /* .gitignore in Resources */,
 				DD70F41B2AFF3E3800EC0BF4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD8C6782AFF588500263B49 /* DetailScreen.swift in Sources */,
 				DD70F4192AFF3E3300EC0BF4 /* ContentView.swift in Sources */,
 				DD70F4172AFF3E3300EC0BF4 /* MoviesApp.swift in Sources */,
+				DD70F4442AFF41B900EC0BF4 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +640,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD70F4452AFF522300EC0BF4 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDD8C6722AFF533900263B49 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD70F4452AFF522300EC0BF4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		DDD8C6742AFF535B00263B49 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD70F4452AFF522300EC0BF4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD70F40B2AFF3E3300EC0BF4 /* Project object */;
 }
