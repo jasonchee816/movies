@@ -4,9 +4,11 @@
 
 ### Sample Format of Config.swift 
 
+```sh
 struct AppConfig {
     static let apiBaseUrl: String = "https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=action"
 }
+```
 
 # Sample Screenshots
 
